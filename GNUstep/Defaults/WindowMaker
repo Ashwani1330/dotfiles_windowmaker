@@ -1,0 +1,83 @@
+{
+  FTitleColor = "#ffffff";
+  FrameBorderColor = "#b6b6b3";
+  THMaximizeKey = "Mod4+Up";
+  MiniaturizeKey = "Mod4+M";
+  BRCMaximizeKey = "Mod4+KP_Next";
+  MenuDisabledColor = "#999999";
+  HotCornerEdge = 2;
+  PixmapPath = (
+    "/home/ashwani/GNUstep/Library/WindowMaker/Pixmaps",
+    "/home/ashwani/GNUstep/Library/WindowMaker/Backgrounds",
+    "/home/ashwani/GNUstep/Library/WindowMaker/CachedPixmaps",
+    "~/pixmaps",
+    "/usr/share/WindowMaker/Pixmaps",
+    "/usr/share/WindowMaker/Backgrounds",
+    "/usr/share/pixmaps"
+  );
+  IconTitleBack = "#3d1b45";
+  FTitleBack = (dgradient, black, mediumorchid4);
+  ToggleKbdModeKey = None;
+  ClipTitleFont = "Verdana:bold:pixelsize=10";
+  IconTitleFont = "Arial,sans serif:pixelsize=9";
+  MenuTextBack = (dgradient, black, dodgerblue4);
+  LargeDisplayFont = "Trebuchet MS,sans serif:pixelsize=24";
+  HotCornerDelay = 250;
+  CenterKey = None;
+  IconTitleColor = "#ffffff";
+  MenuTextColor = "#ffffff";
+  BLCMaximizeKey = "Mod4+KP_End";
+  MenuTitleColor = "#ffffff";
+  HotCorners = YES;
+  MenuTitleFont = "Trebuchet MS,sans serif:bold:pixelsize=12";
+  MoveTo6to12Head = None;
+  WorkspaceNameDisplayPosition = bottomright;
+  TLCMaximizeKey = "Mod4+KP_Home";
+  MenuTextFont = "Trebuchet MS,sans serif:pixelsize=12";
+  WorkspaceBack = (
+    tpixmap,
+    "/home/ashwani/GNUstep/Library/WindowMaker/Backgrounds/wallhaven-purple.png",
+    gray20
+  );
+  HighlightTextColor = "#000000";
+  MenuTitleBack = (dgradient, black, mediumorchid4);
+  EnforceIconMargin = NO;
+  ClipTitleColor = "#ffffff";
+  MoveTo12to6Head = None;
+  HotCornerActions = (None, None, None, None);
+  HighlightColor = "#ffffff";
+  FrameFocusedBorderColor = "#b6b6b3";
+  WindowTitleFont = "Trebuchet MS,sans serif:bold:pixelsize=12";
+  Workspace8Key = "Mod4+8";
+  Workspace10Key = "Mod4+0";
+  Workspace9Key = "Mod4+9";
+  CClipTitleColor = "#333333";
+  LHMaximizeKey = "Mod4+Left";
+  ResizebarBack = (dgradient, black, dodgerblue4);
+  IconPath = (
+    "/home/ashwani/GNUstep/Library/Icons",
+    "/home/ashwani/GNUstep/Library/WindowMaker/Pixmaps",
+    "/home/ashwani/GNUstep/Library/WindowMaker/CachedPixmaps",
+    "~/pixmaps",
+    "/usr/share/WindowMaker/Icons",
+    "/usr/share/WindowMaker/Pixmaps",
+    "/usr/share/pixmaps"
+  );
+  Workspace4Key = "Mod4+4";
+  DisplayFont = "-*-helvetica-medium-r-normal-*-12-*-*-*-*-*-*-*";
+  ModifierKey = Mod4;
+  Workspace5Key = "Mod4+5";
+  BHMaximizeKey = "Mod4+Down";
+  Workspace6Key = "Mod4+6";
+  PTitleBack = (dgradient, mediumorchid4, dodgerblue3);
+  Workspace7Key = "Mod4+7";
+  UTitleColor = "#ffffff";
+  UTitleBack = (dgradient, black, dodgerblue4);
+  TRCMaximizeKey = "Mod4+KP_Prior";
+  PTitleColor = "#bebebe";
+  Workspace1Key = "Mod4+1";
+  Workspace2Key = "Mod4+2";
+  Workspace3Key = "Mod4+3";
+  RHMaximizeKey = "Mod4+Right";
+  FrameSelectedBorderColor = "#ffffff";
+}

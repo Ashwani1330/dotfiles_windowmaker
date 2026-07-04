@@ -1,0 +1,8 @@
+# Window Maker Session State (Contains paths and run commands)
+GNUstep/Defaults/WMState
+
+# Window Maker Dynamic Window Positions
+GNUstep/Defaults/WMWindowAttributes
+
+# Window Maker Icon Cache
+GNUstep/Library/WindowMaker/CachedPixmaps/

@@ -1,0 +1,6 @@
+theme = CGA
+background-opacity = 0.90
+unfocused-split-opacity = 0.85
+background-blur = true
+gtk-single-instance = false
+window-decoration = server

@@ -1,0 +1,103 @@
+# Keybinds
+
+# ─── Applications ───
+# Mod+Return: Open Terminal: Ghostty
+super + Return
+    ghostty
+
+# Mod+D: Open App Launcher: Rofi (Replacing noctalia launcher)
+super + d
+    rofi -show drun -show-icons
+
+# Mod+. : Open Rofi Emoji Picker
+super + period
+    rofi -modi emoji -show emoji
+
+# Mod+C : Open Clipboard History
+super + c
+    CM_LAUNCHER=rofi clipmenu
+
+# Mod+Shift+X: Lock Screen (Using xsecurelock or slock - install one if needed)
+super + shift + x
+    xsecurelock
+
+# Mod+N: File Manager: Thunar
+super + n
+    thunar
+
+# ─── Media Controls (Using pactl/playerctl) ───
+XF86AudioRaiseVolume
+    pactl set-sink-volume @DEFAULT_SINK@ +5%
+XF86AudioLowerVolume
+    pactl set-sink-volume @DEFAULT_SINK@ -5%
+XF86AudioMute
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
+XF86AudioMicMute
+    pactl set-source-mute @DEFAULT_SOURCE@ toggle
+XF86AudioNext
+    playerctl next
+XF86AudioPrev
+    playerctl previous
+XF86AudioPlay
+    playerctl play-pause
+XF86AudioPause
+    playerctl play-pause
+
+# ─── Brightness Controls (Using brightnessctl) ───
+XF86MonBrightnessUp
+    brightnessctl set +5%
+XF86MonBrightnessDown
+    brightnessctl set 5%-
+
+# ─── Window Movement and Focus ───
+# Mod+Shift+Q: Close Window
+super + shift + q
+    wmctrl -c :ACTIVE:
+
+# Window Maker handles focus natively via mouse, but to force X11 focus
+# we'd need complex scripts. In floating WMs, Alt+Tab is standard for cycling.
+# You can leave Mod+[H/J/K/L] unbound for now, as floating layout makes directional focus erratic.
+
+# ─── Workspace Switching ───
+# Mod+[1-9]: Focus Workspace
+super + {1-9}
+    wmctrl -s {0-8}
+
+# Mod+Shift+[1-9]: Move active window to workspace (and optionally switch to it)
+super + shift + {1-9}
+    wmctrl -r :ACTIVE: -t {0-8}
+
+# Mod+TAB: Focus previous workspace (Requires a script tracking history in X11)
+# Workaround: Use Window Maker's built-in Alt+Tab equivalent.
+
+# ─── Layout Controls (Translated for Floating Windows) ───
+# Mod+Shift+C: Center Window
+super + f
+    wmctrl -r :ACTIVE: -e 0,-1,-1,-1,-1 -b add,maximized_vert,maximized_horz
+
+# ─── Modes ───
+# Mod+Shift+F: Fullscreen Window (Toggle)
+super + shift + f
+    wmctrl -r :ACTIVE: -b toggle,fullscreen
+
+# Mod+V: Toggle Floating (In Window Maker, everything is floating, but we can map this to Window Shading/Rollup)
+super + v
+    wmctrl -r :ACTIVE: -b toggle,shaded
+
+# ─── Screenshots (Using maim and xclip instead of grim/slurp/wl-copy) ───
+
+# Mod+Shift+S: Interactive area selection -> Clipboard ONLY
+super + shift + s
+    maim -s | xclip -selection clipboard -t image/png
+
+# Print: Entire screen -> Clipboard ONLY
+Print
+    maim | xclip -selection clipboard -t image/png
+
+# Mod+Print: Entire screen -> Clipboard AND save
+super + Print
+    maim ~/Pictures/Screenshots/$(date +%s).png && xclip -selection clipboard -t image/png -i ~/Pictures/Screenshots/$(date +%s).png
+
+# ─── Reload Keybinds ───
+super + shift + Escape
+    pkill -USR1 -x sxhkd
