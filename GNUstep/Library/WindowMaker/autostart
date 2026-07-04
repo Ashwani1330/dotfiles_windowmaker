@@ -25,4 +25,5 @@ wmnd &
 wmsystemtray &
 dunst &
 xset m 20/10 4
-
+nm-applet &
+blueman-applet &
