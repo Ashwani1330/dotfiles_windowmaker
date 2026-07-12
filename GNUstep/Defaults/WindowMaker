@@ -30,6 +30,7 @@
   MenuTitleColor = "#ffffff";
   HotCorners = YES;
   MenuTitleFont = "Trebuchet MS,sans serif:bold:pixelsize=12";
+  SmoothWorkspaceBack = NO;
   MoveTo6to12Head = None;
   WorkspaceNameDisplayPosition = bottomright;
   TLCMaximizeKey = "Mod4+KP_Home";

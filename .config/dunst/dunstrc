@@ -1,7 +1,17 @@
 [global]
     font = Monospace 10
     frame_width = 2
-    frame_color = "#7c3aed"
-    background = "#181825"
-    foreground = "#cdd6f4"
+
+    # Muted mid-tone purple from the alleyway walls
+    frame_color = "#4d3d60"
+
+    # Deep shadow purple/black for the background
+    background = "#131018"
+
+    # Washed-out, pale text to match the sky
+    foreground = "#e5e1eb"
+
+    # Lighter, desaturated purple for the actual volume/brightness bar
+    highlight = "#8772a8"
+
     timeout = 5

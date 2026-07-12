@@ -1,4 +1,6 @@
 #!/bin/sh
+
+export TERMINAL="ghostty"
 #
 # Place applications to be executed when WindowMaker is started here.
 # This should only be used for non-X applications or applications that
@@ -20,6 +22,7 @@ wmcpuload &
 wmnet -W wlan0 &
 clipmenud &
 wmgtemp &
+wmbattery &
 volumeicon &
 wmnd &
 wmsystemtray &

@@ -25,29 +25,37 @@ super + shift + x
 super + n
     thunar
 
-# ─── Media Controls (Using pactl/playerctl) ───
+# ─── Media Controls (With OSD Bars) ───
 XF86AudioRaiseVolume
-    pactl set-sink-volume @DEFAULT_SINK@ +5%
+    pamixer -i 5 && notify-send -a "System" -t 1500 -h int:value:$(pamixer --get-volume) "Volume"
+
 XF86AudioLowerVolume
-    pactl set-sink-volume @DEFAULT_SINK@ -5%
+    pamixer -d 5 && notify-send -a "System" -t 1500 -h int:value:$(pamixer --get-volume) "Volume"
+
 XF86AudioMute
-    pactl set-sink-mute @DEFAULT_SINK@ toggle
+    pamixer -t && notify-send -a "System" -t 1500 "Audio Muted/Unmuted"
+
 XF86AudioMicMute
     pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
 XF86AudioNext
     playerctl next
+
 XF86AudioPrev
     playerctl previous
+
 XF86AudioPlay
     playerctl play-pause
+
 XF86AudioPause
     playerctl play-pause
 
-# ─── Brightness Controls (Using brightnessctl) ───
+# ─── Brightness Controls (With OSD Bars) ───
 XF86MonBrightnessUp
-    brightnessctl set +5%
+    brightnessctl set +5% && notify-send -a "System" -t 1500 -h int:value:$(brightnessctl -m | cut -d, -f4 | tr -d %) "Brightness"
+
 XF86MonBrightnessDown
-    brightnessctl set 5%-
+    brightnessctl set 5%- && notify-send -a "System" -t 1500 -h int:value:$(brightnessctl -m | cut -d, -f4 | tr -d %) "Brightness"
 
 # ─── Window Movement and Focus ───
 # Mod+Shift+Q: Close Window
